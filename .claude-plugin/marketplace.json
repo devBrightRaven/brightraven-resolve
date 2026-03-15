@@ -1,0 +1,13 @@
+{
+  "name": "brightraven-resolve",
+  "owner": {
+    "name": "devBrightRaven"
+  },
+  "plugins": [
+    {
+      "name": "brightraven-resolve",
+      "source": "./",
+      "description": "Six-pillar AI behavior governance — Vision, Structure, Persistence, Direction, Heart, Awareness"
+    }
+  ]
+}
