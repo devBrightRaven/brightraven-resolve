@@ -1,0 +1,31 @@
+{
+  "name": "brightraven-resolve",
+  "version": "1.0.0",
+  "description": "Six-pillar AI behavior governance: Vision, Structure, Persistence, Direction, Heart, Awareness. Combines the best of PUA persistence, YES.md evidence gates, gstack product thinking, and washin verification loops — with empathy instead of pressure.",
+  "author": {
+    "name": "bright-raven"
+  },
+  "license": "MIT",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/post-edit-ripple.sh\" \"$TOOL_INPUT\""
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/post-deploy-health.sh\" \"$TOOL_INPUT\""
+          }
+        ]
+      }
+    ]
+  }
+}
